@@ -1,5 +1,4 @@
-/ kuty and pappu plays a coding game. kuty give a set of numbers to pappu to find the even numbers in the set and sum that. Help pappu to solve the game and to win the diary milk.
-
+/ Arun and Kalai were playing a puzzle game in a given set of numbers. They need to find the odd and even numbers and to find the sum of the odd and even. Help them to solve the puzzle game and to win the mobile phone.
 Input Format:
 
 Input consists of n+1 integers. The first integer corresponds to ‘n’ , the size of the array. The next ‘n’ integers correspond to the elements in the array. Assume that the maximum value of n is 15.
@@ -22,25 +21,35 @@ Sample Input :
 
 -1
 
-Sample Output 1:
+Sample Output :
 
-The sum of the even numbers in the array is 16 /
+The sum of the even numbers in the array is 16
+
+The sum of the odd numbers in the array is 8
+
+/
   import java.util.Scanner;
 public class Main
 {
     public static void main(String[] args)
     {
         //Write your code
-        //declare vars
+        //declare the vars
         Scanner sc=new Scanner(System.in);
         int n=sc.nextInt();
         int arr[]=new int[n];
-        int x=0;
+        int x=0,x1=0;
         for(int i=0;i<n;i++){
             arr[i]=sc.nextInt();
         }
         for(int i=0;i<n;i++){
             if(arr[i]%2==0){
-             x+=arr[i];}}//smart point
-            System.out.print("The sum of the even numbers in the array is "+x);
-}}
+                x+=arr[i];
+            }
+            if(arr[i]%2!=0){
+                x1+=arr[i];
+            }
+        }System.out.println("The sum of the even numbers in the array is "+x);
+    System.out.print("The sum of the odd numbers in the array is "+x1);}
+}
+
